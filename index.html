@@ -1,0 +1,53 @@
+<!DOCTYPE HTML>
+<html>
+	<title>height Detection</title>
+	<link rel="stylesheet" href="style.css">
+<head>  
+<script>
+window.onload = function () {
+
+var chart = new CanvasJS.Chart("chartContainer", {
+	animationEnabled: true,  
+	title:{
+		text: "Height detection System"
+	},
+	axisY: {
+		title: "Height",
+		valueFormatString: "#0,,.",
+		suffix: "m",
+		stripLines: [{
+			value: 2366500,
+			label: "Average"
+		}]
+},
+
+	
+
+	data: [{
+		yValueFormatString: "#,### Units",
+		xValueFormatString: "0.0#",
+		type: "spline",
+		dataPoints: [
+			{x: 0.1, y: 0006000},
+			{x: 0.2, y: 5586000},
+			{x: 0.3, y: 0044000},
+			{x: 0.4, y: 3394000},
+			{x: 0.5, y: 0072000},
+			{x: 0.6, y: 2289000},
+			{x: 0.7, y: 0030000},
+			{x: 0.8, y: 1140000},
+			{x: 0.9, y: 0096000},
+			{x: 1, y: 0113000},
+		]
+	}]
+});
+chart.render();
+
+}
+</script>
+</head>
+<body>
+<div id="chartContainer" style="height: 370px; width: 100%;"></div>
+<script src="https://canvasjs.com/assets/script/canvasjs.min.js"></script>
+</body>
+</html>
